@@ -39,7 +39,7 @@ int tryConnect(char* ip, char* token) {
 	snprintf(cmd, sizeof cmd,
 		"python3 -c \""
 		"import miio;"
-		"result = miio.device.Device('%s', '%s').send('get_ipcprop', ['all']);"
+		"result = miio.device.Device('%s', '%s').send('nas_get_config', ['all']);"
 		"print(result['p2p_id']);"
 		"print(result['avID']);"
 		"print(result['avPass']);"
